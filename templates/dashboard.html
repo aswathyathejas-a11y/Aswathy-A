@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>employee management</h1>
+    <p>Welcome, {{ request.user.username }}</p>
+
+    <hr>
+
+    <h3>Quick Actions</h3>
+
+    <a href="/employees/add/">➕ Add Employee</a><br><br>
+    <a href="/employees/">📋 View Employees</a><br><br>
+    <a href="/logout/">🚪 Logout</a>
+
+    
+</body>
+</html>
