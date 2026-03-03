@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department List</title>
+</head>
+<body>
+
+<h2>Department List</h2>
+
+<table border="1">
+<tr>
+    <th>Name</th>
+    <th>Description</th>
+</tr>
+
+{% for dept in departments %}
+<tr>
+    <td>
+        <a href="{% url 'department_detail' dept.id %}">
+            {{ dept.name }}
+        </a>
+    </td>
+    <td>{{ dept.description }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+<br>
+<br>
+<a href="/dashboard/">Home</a>
+</body>
+</html>

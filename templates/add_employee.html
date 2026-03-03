@@ -6,7 +6,7 @@
     <title>ADD EMPLOYEE</title>
 </head>
 <body>
-    <h2> ADD EMPLOYEE</h2>
+    <h2>Add Employee — {{ department.name }}</h2>
     <form method='POST'>
         {% csrf_token %}
         {{ form.as_p }}

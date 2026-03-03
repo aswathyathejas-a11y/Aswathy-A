@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department</title>
+</head>
+<body>
+
+<h2>Department: {{ department.name }}</h2>
+
+<a href="{% url 'add_employee_by_dept' department.id %}">
+    Add Employee
+</a>
+
+<br><br>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>phone</th>
+</tr>
+
+{% for emp in employees %}
+<tr>
+    <td>{{ emp.name }}</td>
+    <td>{{ emp.email }}</td>
+    <td>{{ emp.phone }}</td>
+</tr>
+{% empty %}
+<tr>
+    <td colspan="2">No employees in this department</td>
+</tr>
+{% endfor %}
+</table>
+
+<br>
+<a href="{% url 'department_list' %}">Back</a>
+
+</body>
+</html>
